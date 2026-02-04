@@ -22,9 +22,26 @@ public int pop(){
         System.out.println("Stack Underflow");
         return -1;
     }
-    int val=stack[top];
-    top--;
-    return val;
+   // int val=stack[top];
+    //top--;
+    return stack[top--];
+}
+
+public int peep(){
+    if(top==-1){
+        System.out.println("Stack is empty");
+        return -1;
+    }
+    return stack[top];
+}
+void display(){
+    if(top==-1){
+        System.out.println("Stack is empty");
+        return;
+    }
+    for(int i=top;i>=0;i--){
+        System.out.println(stack[i]);
+    }
 }
 }
 public class stack {
@@ -33,6 +50,8 @@ public class stack {
         s.push(10);
         s.push(15);
         s.push(30);
+        System.err.println("Stack elements are:\n");
+        s.display();
         System.out.println(s.pop());
         System.out.println(s.pop());
         System.out.println(s.pop());
