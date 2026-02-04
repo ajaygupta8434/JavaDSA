@@ -61,11 +61,15 @@ class Arraymerge {
     int k = 0;
 
     for (int i = 0; i < a1.length(); i++)
-        merged[k] = a1.get(i);
+       {
+         merged[k] = a1.get(i);
         k++;
+       }
     for (int j = 0; j < a2.length(); j++)
-        merged[k] = a2.get(j);
-        k++;    
+        {
+            merged[k] = a2.get(j);
+        k++; 
+        }   
     return merged;
 }
 
